@@ -1,0 +1,127 @@
+{
+  "Angular Component": {
+    "prefix": "ng2-component",
+    "description": "Angular 2 component snippet",
+    "body": [
+      "import { Component, OnInit } from '@angular/core';",
+      "",
+      "@Component({",
+      "\tmoduleId: module.id,",
+      "\tselector: '${selector}',",
+      "\ttemplateUrl: '${name}.component.html'",
+      "})",
+      "export class ${ComponentName}Component implements OnInit {",
+      "\tconstructor() { }",
+      "",
+      "\tngOnInit() { }",
+      "$0",
+      "}"
+    ]
+  },
+  "Angular Service": {
+    "prefix": "ng2-service",
+    "description": "Angular 2 service snippet",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "",
+      "@Injectable()",
+      "export class ${ServiceName}Service {",
+      "$0",
+      "\tconstructor() { }",
+      "",
+      "}"
+    ]
+  },
+  "Angular Pipe": {
+    "prefix": "ng2-pipe",
+    "description": "Angular 2 pipe snippet",
+    "body": [
+      "import { Pipe, PipeTransform } from '@angular/core';",
+      "",
+      "@Pipe({",
+      "\tname: '${name}'",
+      "})",
+      "",
+      "export class ${PipeName}Pipe implements PipeTransform {",
+      "\ttransform(value: any, args: any[]): any {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ]
+  },
+  "Angular Routes": {
+    "prefix": "ng2-routes",
+    "description": "Angular 2 route config snippet",
+    "body": [
+      "@Routes([",
+      "\t{ path: '/${path}', component: ${Component} }$0",
+      "])"
+    ]
+  },
+  "Angular RouteDefinition": {
+    "prefix": "ng2-route-path",
+    "description": "Angular 2 route path snippet",
+    "body": [
+      "{ path: '/${path}', component: ${Component} }$0"
+    ]
+  },
+  "Http.get": {
+    "prefix": "ng2-http-get",
+    "description": "Angular 2 Http.get snippet",
+    "body": [
+      "return this.http.get('${url}')",
+      "\t.map((res: Response) => res.json()${0});"
+    ]
+  },
+  "Subscribe": {
+    "prefix": "ng2-subscribe",
+    "description": "Angular 2 observable subscribe snippet",
+    "body": [
+      "this.${service}.${function}",
+      "\t.subscribe(${arg} => this.${property} = ${arg});",
+      "$0"
+    ]
+  },
+  "Angular Bootstrapping": {
+    "prefix": "ng2-bootstrap",
+    "description": "Angular 2 bootstrap snippet",
+    "body": [
+      "import { enableProdMode } from '@angular/core';",
+      "import { bootstrap } from '@angular/platform-browser-dynamic';",
+      "",
+      "import { ${AppComponent} } from './${name}.component';",
+      "",
+      "// enableProdMode();",
+      "",
+      "bootstrap(${AppComponent})",
+      "\t.then(success => console.log(`Bootstrap success`))",
+      "\t.catch(error => console.log(error));",
+      "$0"
+    ]
+  },
+  "AppComponent": {
+    "prefix": "ng2-component-root",
+    "description": "Angular 2 App root component snippet",
+    "body": [
+      "import { Component } from '@angular/core';",
+      "import { HTTP_PROVIDERS } from '@angular/http';",
+      "import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';",
+      "import 'rxjs/Rx'; // load the full rxjs",
+      "",
+      "@Component({",
+      "\tmoduleId: module.id,",
+      "\tselector: '${selector}',",
+      "\ttemplateUrl: '${name}.component.html',",
+      "\tdirectives: [ROUTER_DIRECTIVES],",
+      "\tproviders: [",
+      "\t  HTTP_PROVIDERS,",
+      "\t  ROUTER_PROVIDERS",
+      "\t]",
+      "})",
+      "@Routes([",
+      "\t$0",
+      "])",
+      "export class AppComponent {}"
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+	"name": "vscode-mermaid-preview",
+	"displayName": "Mermaid Preview",
+	"description": "Previews Mermaid diagrams in Visual Studio Code",
+	"version": "0.4.0",
+	"publisher": "vstirbu",
+	"bugs": {
+		"url": "https://github.com/vstirbu/vscode-mermaid-preview/issues"
+	},
+	"homepage": "https://github.com/vstirbu/vscode-mermaid-preview",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vstirbu/vscode-mermaid-preview.git"
+	},
+	"icon": "images/logo.svg",
+	"galleryBanner": {
+		"color": "#5c2d91",
+		"theme": "dark"
+	},
+	"keywords": [
+		"mermaid",
+		"diagrams",
+		"uml"
+	],
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.previewMermaidDiagram"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.previewMermaidDiagram",
+				"title": "Preview Mermaid Diagram"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"lodash": "^4.13.1",
+		"mermaid": "^6.0.0"
+	},
+	"devDependencies": {
+		"vscode": "^0.11.13"
+	},
+	"__metadata": {
+		"id": "b7b3f8c2-0526-4262-9e55-045c954adac4",
+		"publisherId": "aafbf1ca-4f27-4b81-ad83-f68740a598a3",
+		"publisherDisplayName": "Vlad Stirbu"
+	}
+}

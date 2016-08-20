@@ -1,0 +1,34 @@
+{
+	"name": "html-css-class-completion",
+	"displayName": "HTML CSS Class Completion",
+	"description": "Provides CSS class completion for the HTML class attribute.",
+	"version": "0.0.2",
+	"publisher": "Zignd",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Languages",
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:html"
+	],
+	"icon": "images/icon.png",
+	"main": "./extension",
+	"repository": {
+		"url": "https://github.com/Zignd/HTML-CSS-Class-Completion"
+	},
+	"dependencies": {
+		"css": "2.2.1",
+		"cheerio": "0.19.0"
+	},
+	"devDependencies": {
+		"vscode": "0.10.x"
+	},
+	"__metadata": {
+		"id": "7b71fc1b-190d-4f7d-95d1-93e422649b0a",
+		"publisherId": "20bf23ac-66a2-4404-9047-4b8215047b8b",
+		"publisherDisplayName": "Zignd"
+	}
+}
